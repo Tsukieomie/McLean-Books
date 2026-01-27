@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Methods for Detecting Biology Affecting EM Frequencies</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Methods for Detecting Biology Affecting EM
+Frequencies</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a
+href="#methods-for-detecting-biology-affecting-electromagnetic-frequency-ranges-causing-havana-syndrome"
+id="toc-methods-for-detecting-biology-affecting-electromagnetic-frequency-ranges-causing-havana-syndrome">Methods
+for Detecting Biology Affecting Electromagnetic Frequency Ranges Causing
+Havana Syndrome</a></li>
+</ul>
+</nav>
+<h1
+id="methods-for-detecting-biology-affecting-electromagnetic-frequency-ranges-causing-havana-syndrome">Methods
+for Detecting Biology Affecting Electromagnetic Frequency Ranges Causing
+Havana Syndrome</h1>
+<p><strong>Author:</strong> Clint McLean</p>
+<hr />
+<p><a id="toc"></a> ## Table of Contents</p>
+<ol type="1">
+<li><a href="#abstract">Abstract</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#methods">Methods</a>
+<ul>
+<li><a href="#hypothesis">2.1 Hypothesis</a></li>
+<li><a href="#equipment">2.2 Equipment and Setup</a></li>
+<li><a href="#sdr-config">2.3 SDR Software Configuration</a></li>
+<li><a href="#detection-methodology">2.4 Detection Methodology</a></li>
+</ul></li>
+<li><a href="#results">Results</a>
+<ul>
+<li><a href="#initial-scans">3.1 Initial Scans</a></li>
+<li><a href="#433-detection">3.2 433 MHz Detection</a></li>
+<li><a href="#signal-analysis">3.3 Signal Analysis</a></li>
+</ul></li>
+<li><a href="#discussion">Discussion</a>
+<ul>
+<li><a href="#cazzamalli">4.1 Cazzamalli’s Historical Research</a></li>
+<li><a href="#bio-radar">4.2 Bio-Radar Principles</a></li>
+<li><a href="#rnm">4.3 Remote Neural Monitoring</a></li>
+<li><a href="#implications">4.4 Implications for Havana
+Syndrome</a></li>
+</ul></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#references">References</a></li>
+<li><a href="#figures-index">Figures</a></li>
+</ol>
+<hr />
+<p><a id="abstract"></a> ## Abstract</p>
+<p>This paper presents methods for detecting electromagnetic frequencies
+that may affect human biology, specifically in the context of Havana
+Syndrome. Using Software Defined Radio (SDR) technology and spectrum
+analysis, we investigate the detection of reradiated electromagnetic
+signals from biological targets. The methodology draws upon historical
+research by Cazzamalli on brain radio signals and modern understanding
+of bio-radar technology. Results demonstrate detection of signals at 433
+MHz that correlate with known ISM band frequencies used in various
+electronic devices and potentially in directed energy systems.</p>
+<p><a href="#toc">↑ Back to Table of Contents</a></p>
+<hr />
+<p><a id="introduction"></a> ## 1. Introduction</p>
+<p>Havana Syndrome refers to a set of medical symptoms reported by U.S.
+and Canadian embassy staff, first in Havana, Cuba in late 2016, and
+subsequently in other locations worldwide. Symptoms include hearing
+unusual sounds, headaches, memory loss, nausea, and brain injuries
+consistent with traumatic brain injury without physical impact.</p>
+<p>The cause of Havana Syndrome remains officially unexplained, though
+theories include microwave weapons, sonic devices, pesticides, or
+psychogenic factors. This paper focuses on the electromagnetic (EM)
+hypothesis and presents methods for detecting EM frequencies that could
+potentially affect human biology.</p>
+<p><a id="figure-1"></a> <img src="figures/fig-001.png"
+alt="Figure 1: Cazzamalli’s Experiment Setup" /> <em>Figure 1:
+Cazzamalli’s experimental apparatus for detecting brain radio emissions
+(1920s)</em></p>
+<p><a href="#toc">↑ Back to TOC</a> | <a href="#figures-index">View all
+Figures</a></p>
+<p>The historical research of Dr. Ferdinando Cazzamalli in the 1920s and
+1930s provides foundational understanding of how electromagnetic waves
+interact with the human brain. Cazzamalli demonstrated that the brain
+could reradiate electromagnetic signals when exposed to certain
+frequencies, creating what he termed “brain radio.”</p>
+<p>Understanding these interactions is critical for: - Detecting
+potential directed energy attacks - Developing countermeasures and
+shielding - Establishing forensic evidence of EM exposure - Advancing
+our understanding of bioelectromagnetic phenomena</p>
+<p><a href="#toc">↑ Back to Table of Contents</a></p>
+<hr />
+<p><a id="methods"></a> ## 2. Methods</p>
+<p><a id="hypothesis"></a> ### 2.1 Hypothesis</p>
+<p>Based on the bio-radar principle and Cazzamalli’s research, we
+hypothesize that:</p>
+<ol type="1">
+<li>Human tissue acts as a resonant cavity for certain electromagnetic
+frequencies</li>
+<li>When illuminated by RF energy at resonant frequencies, the body
+reradiates detectable signals</li>
+<li>These reradiated signals can be detected using SDR technology</li>
+<li>The frequency range of interest is approximately 300 MHz to 3 GHz
+(UHF band)</li>
+</ol>
+<p><a id="figure-2"></a> <img src="figures/fig-002.png"
+alt="Figure 2: RF Transmission and Reception Concept" /> <em>Figure 2:
+Conceptual diagram of RF transmission to and reception from biological
+target</em></p>
+<p><a href="#toc">↑ Back to TOC</a> | <a href="#figures-index">View all
+Figures</a></p>
+<p><a id="equipment"></a> ### 2.2 Equipment and Setup</p>
+<p>The following equipment was used for detection experiments:</p>
+<p><strong>Hardware:</strong> - RTL-SDR Blog V3 dongle (RTL2832U +
+R820T2) - Various antennas (dipole, discone, log-periodic) - USB
+extension cables for antenna positioning - Laptop computer
+(Windows/Linux) - Faraday cage materials for baseline measurements</p>
+<p><strong>Software:</strong> - SDR# (SDRSharp) for Windows - GQRX for
+Linux - GNU Radio for advanced signal processing - Spectrum analyzer
+plugins</p>
+<p><a id="figure-3"></a> <img src="figures/fig-003.png"
+alt="Figure 3: SDR Equipment Setup" /> <em>Figure 3: RTL-SDR dongle and
+antenna configuration</em></p>
+<p><a href="#toc">↑ Back to TOC</a> | <a href="#figures-index">View all
+Figures</a></p>
+<p><a id="sdr-config"></a> ### 2.3 SDR Software Configuration</p>
+<p>SDR# was configured with the following parameters for initial
+scanning:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sample Rate</td>
+<td>2.4 MSPS</td>
+</tr>
+<tr>
+<td>RF Gain</td>
+<td>Auto/Manual adjustment</td>
+</tr>
+<tr>
+<td>FFT Resolution</td>
+<td>32768</td>
+</tr>
+<tr>
+<td>Averaging</td>
+<td>10 frames</td>
+</tr>
+<tr>
+<td>Frequency Range</td>
+<td>24 MHz - 1.7 GHz</td>
+</tr>
+</tbody>
+</table>
+<p><a id="figure-4"></a> <img src="figures/fig-004.png"
+alt="Figure 4: SDR# Interface" /> <em>Figure 4: SDR# software interface
+showing spectrum analyzer and waterfall display</em></p>
+<p><a href="#toc">↑ Back to TOC</a> | <a href="#figures-index">View all
+Figures</a></p>
+<p><a id="detection-methodology"></a> ### 2.4 Detection Methodology</p>
+<p>The detection methodology follows these steps:</p>
+<ol type="1">
+<li><strong>Baseline Measurement</strong>: Record ambient RF spectrum
+with no subject present</li>
+<li><strong>Subject Introduction</strong>: Position subject near
+receiving antenna</li>
+<li><strong>Comparative Analysis</strong>: Compare spectra with and
+without subject</li>
+<li><strong>Frequency Sweeping</strong>: Systematically scan frequency
+bands of interest</li>
+<li><strong>Signal Characterization</strong>: Analyze detected signals
+for modulation, bandwidth, and temporal patterns</li>
+</ol>
+<p><a id="figure-5"></a> <img src="figures/fig-005.png"
+alt="Figure 5: Detection Protocol Flowchart" /> <em>Figure 5: Flowchart
+showing the systematic detection protocol</em></p>
+<p><a href="#toc">↑ Back to TOC</a> | <a href="#figures-index">View all
+Figures</a></p>
+<p>Key frequencies of interest based on literature review:</p>
+<ul>
+<li><strong>433 MHz</strong>: ISM band (Europe), common for remote
+controls and sensors</li>
+<li><strong>915 MHz</strong>: ISM band (Americas), RFID systems</li>
+<li><strong>2.4 GHz</strong>: WiFi, Bluetooth, microwave ovens</li>
+<li><strong>Resonant frequencies</strong>: Calculated based on body
+dimensions (~400-700 MHz)</li>
+</ul>
+<p><a href="#toc">↑ Back to Table of Contents</a></p>
+<hr />
+<p><a id="results"></a> ## 3. Results</p>
+<p><a id="initial-scans"></a> ### 3.1 Initial Scans</p>
+<p>Initial wideband scans revealed the typical urban RF environment with
+expected signals from: - FM radio (88-108 MHz) - Television broadcasts -
+Cellular networks (700, 850, 1900 MHz) - WiFi (2.4 GHz) - Various ISM
+band devices</p>
+<p><a id="figure-6"></a> <img src="figures/fig-006.png"
+alt="Figure 6: Wideband Spectrum Scan" /> <em>Figure 6: Wideband
+spectrum showing typical urban RF environment</em></p>
+<p><a href="#toc">↑ Back to TOC</a> | <a href="#figures-index">View all
+Figures</a></p>
+<p><a id="433-detection"></a> ### 3.2 433 MHz Detection</p>
+<p>Focused scanning at 433 MHz revealed interesting signals that
+correlated with subject presence:</p>
+<p><a id="figure-7"></a> <img src="figures/fig-007.png"
+alt="Figure 7: 433 MHz Spectrum Detail" /> <em>Figure 7: Detailed
+spectrum view centered on 433 MHz</em></p>
+<p><a href="#toc">↑ Back to TOC</a> | <a href="#figures-index">View all
+Figures</a></p>
+<p>The 433 MHz ISM band showed: - Periodic burst transmissions - Signal
+strength variations correlating with subject movement - Modulation
+patterns consistent with bio-radar returns</p>
+<p><a id="figure-8"></a> <img src="figures/fig-008.png"
+alt="Figure 8: 433 MHz Signal with Subject Present" /> <em>Figure 8:
+Signal detected at 433 MHz with subject in proximity to antenna</em></p>
+<p><a href="#toc">↑ Back to TOC</a> | <a href="#figures-index">View all
+Figures</a></p>
+<p><a id="signal-analysis"></a> ### 3.3 Signal Analysis</p>
+<p>Detailed analysis of detected signals revealed:</p>
+<table>
+<thead>
+<tr>
+<th>Measurement</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Center Frequency</td>
+<td>433.92 MHz</td>
+</tr>
+<tr>
+<td>Bandwidth</td>
+<td>~50 kHz</td>
+</tr>
+<tr>
+<td>Signal Strength</td>
+<td>-45 to -65 dBm</td>
+</tr>
+<tr>
+<td>Modulation</td>
+<td>OOK/ASK</td>
+</tr>
+<tr>
+<td>Pulse Duration</td>
+<td>Variable (10-100 ms)</td>
+</tr>
+</tbody>
+</table>
+<p><a id="figure-9"></a> <img src="figures/fig-009.png"
+alt="Figure 9: Signal Analysis Waterfall" /> <em>Figure 9: Waterfall
+display showing temporal pattern of 433 MHz signals</em></p>
+<p><a href="#toc">↑ Back to TOC</a> | <a href="#figures-index">View all
+Figures</a></p>
+<p>The signals exhibited characteristics consistent with: - Remote
+keyless entry systems - Wireless sensors and weather stations -
+Potential bio-radar illumination sources</p>
+<p><a id="figure-10"></a> <img src="figures/fig-010.png"
+alt="Figure 10: Decoded Signal Pattern" /> <em>Figure 10: Decoded on-off
+keying pattern from 433 MHz transmission</em></p>
+<p><a href="#toc">↑ Back to TOC</a> | <a href="#figures-index">View all
+Figures</a></p>
+<p><a href="#toc">↑ Back to Table of Contents</a></p>
+<hr />
+<p><a id="discussion"></a> ## 4. Discussion</p>
+<p><a id="cazzamalli"></a> ### 4.1 Cazzamalli’s Historical Research</p>
+<p>Dr. Ferdinando Cazzamalli (1887-1958) conducted pioneering research
+on the interaction between electromagnetic waves and the human brain.
+His experiments in the 1920s demonstrated that:</p>
+<ol type="1">
+<li>The brain emits weak electromagnetic signals</li>
+<li>When exposed to external EM fields, the brain reradiates modified
+signals</li>
+<li>These reradiated signals contain information about mental
+states</li>
+</ol>
+<p><a id="figure-11"></a> <img src="figures/fig-011.png"
+alt="Figure 11: Cazzamalli’s Original Apparatus" /> <em>Figure 11:
+Diagram of Cazzamalli’s original experimental apparatus</em></p>
+<p><a href="#toc">↑ Back to TOC</a> | <a href="#figures-index">View all
+Figures</a></p>
+<p>Cazzamalli’s work, while controversial, laid the foundation for
+understanding bioelectromagnetic interactions. Modern technology allows
+us to revisit his findings with more sensitive equipment.</p>
+<p><a id="bio-radar"></a> ### 4.2 Bio-Radar Principles</p>
+<p>Bio-radar (biological radar) operates on the principle that living
+tissue has unique electromagnetic properties:</p>
+<ul>
+<li><strong>Dielectric properties</strong>: Tissue permittivity varies
+with frequency</li>
+<li><strong>Conductivity</strong>: Biological tissues conduct
+electricity</li>
+<li><strong>Resonance</strong>: Body cavities and organs have resonant
+frequencies</li>
+<li><strong>Motion detection</strong>: Respiration and heartbeat
+modulate reflected signals</li>
+</ul>
+<p><a id="figure-12"></a> <img src="figures/fig-012.png"
+alt="Figure 12: Bio-Radar Block Diagram" /> <em>Figure 12: Block diagram
+of a bio-radar detection system</em></p>
+<p><a href="#toc">↑ Back to TOC</a> | <a href="#figures-index">View all
+Figures</a></p>
+<p>The human body’s resonant frequencies depend on:</p>
+<p><span class="math display">\[f_r =
+\frac{c}{2L\sqrt{\epsilon_r}}\]</span></p>
+<p>Where: - <span class="math inline">\(f_r\)</span> = resonant
+frequency - <span class="math inline">\(c\)</span> = speed of light -
+<span class="math inline">\(L\)</span> = body dimension - <span
+class="math inline">\(\epsilon_r\)</span> = relative permittivity of
+tissue</p>
+<p><a id="figure-13"></a> <img src="figures/fig-013.png"
+alt="Figure 13: Tissue Permittivity vs Frequency" /> <em>Figure 13:
+Graph showing tissue permittivity as a function of frequency</em></p>
+<p><a href="#toc">↑ Back to TOC</a> | <a href="#figures-index">View all
+Figures</a></p>
+<p><a id="rnm"></a> ### 4.3 Remote Neural Monitoring</p>
+<p>Remote Neural Monitoring (RNM) refers to the theoretical capability
+to remotely detect and interpret neural activity. While officially
+classified technology, patents and academic literature suggest systems
+capable of:</p>
+<ul>
+<li>Detecting brain wave patterns at a distance</li>
+<li>Correlating neural activity with thoughts or intentions</li>
+<li>Two-way communication with the nervous system</li>
+</ul>
+<p><a id="figure-14"></a> <img src="figures/fig-014.png"
+alt="Figure 14: RNM Concept Diagram" /> <em>Figure 14: Conceptual
+diagram of Remote Neural Monitoring system</em></p>
+<p><a href="#toc">↑ Back to TOC</a> | <a href="#figures-index">View all
+Figures</a></p>
+<p>Such systems would require: 1. High-sensitivity receivers 2. Signal
+processing for weak signal extraction 3. Pattern recognition algorithms
+4. Reference databases of neural signatures</p>
+<p><a id="figure-15"></a> <img src="figures/fig-015.png"
+alt="Figure 15: Neural Signal Processing Chain" /> <em>Figure 15: Signal
+processing chain for neural signal extraction</em></p>
+<p><a href="#toc">↑ Back to TOC</a> | <a href="#figures-index">View all
+Figures</a></p>
+<p><a id="implications"></a> ### 4.4 Implications for Havana
+Syndrome</p>
+<p>The detection methods presented have implications for Havana Syndrome
+research:</p>
+<ol type="1">
+<li><strong>Forensic Detection</strong>: SDR technology could detect
+ongoing EM attacks</li>
+<li><strong>Frequency Identification</strong>: Pinpointing specific
+frequencies used</li>
+<li><strong>Source Localization</strong>: Direction-finding to locate
+transmitters</li>
+<li><strong>Countermeasures</strong>: Developing shielding and jamming
+techniques</li>
+</ol>
+<p><a id="figure-16"></a> <img src="figures/fig-016.png"
+alt="Figure 16: Havana Syndrome Symptom Correlation" /> <em>Figure 16:
+Correlation between EM exposure and reported Havana Syndrome
+symptoms</em></p>
+<p><a href="#toc">↑ Back to TOC</a> | <a href="#figures-index">View all
+Figures</a></p>
+<p>Challenges include: - Distinguishing attack signals from ambient RF -
+Real-time detection requirements - Legal and regulatory constraints on
+jamming - International cooperation and attribution</p>
+<p><a href="#toc">↑ Back to Table of Contents</a></p>
+<hr />
+<p><a id="conclusion"></a> ## 5. Conclusion</p>
+<p>This paper presents practical methods for detecting electromagnetic
+frequencies that may affect human biology in the context of Havana
+Syndrome investigations. Key findings include:</p>
+<ol type="1">
+<li><strong>SDR Accessibility</strong>: Consumer-grade SDR equipment can
+detect signals in frequency ranges of interest</li>
+<li><strong>433 MHz Activity</strong>: Significant signal activity was
+detected at 433 MHz, warranting further investigation</li>
+<li><strong>Bio-Radar Principles</strong>: The theoretical framework of
+bio-radar provides a basis for understanding EM-biological
+interactions</li>
+<li><strong>Detection Feasibility</strong>: It is feasible to detect
+potential directed energy signals with proper methodology</li>
+</ol>
+<p><a id="figure-17"></a> <img src="figures/fig-017.png"
+alt="Figure 17: Summary of Detection Results" /> <em>Figure 17: Summary
+visualization of detection results across frequency bands</em></p>
+<p><a href="#toc">↑ Back to TOC</a> | <a href="#figures-index">View all
+Figures</a></p>
+<p>Future work should include: - Controlled laboratory experiments -
+Collaboration with medical researchers - Development of automated
+detection systems - International standardization of detection
+protocols</p>
+<p>The methods presented provide a starting point for individuals and
+organizations seeking to investigate potential EM-based attacks and
+develop protective countermeasures.</p>
+<p><a href="#toc">↑ Back to Table of Contents</a></p>
+<hr />
+<p><a id="references"></a> ## References</p>
+<ol type="1">
+<li><p>Cazzamalli, F. (1925). “Telepsychic phenomena and brain
+radiations.” <em>Neurological Journal</em>, 2, 1-15.</p></li>
+<li><p>Lin, J.C. (2021). “Microwave Auditory Effects and Applications.”
+<em>Charles C Thomas Publisher</em>.</p></li>
+<li><p>Frey, A.H. (1962). “Human auditory system response to modulated
+electromagnetic energy.” <em>Journal of Applied Physiology</em>, 17(4),
+689-692.</p></li>
+<li><p>National Academies of Sciences, Engineering, and Medicine.
+(2020). “An Assessment of Illness in U.S. Government Employees and Their
+Families at Overseas Embassies.”</p></li>
+<li><p>Pall, M.L. (2018). “Microwave frequency electromagnetic fields
+(EMFs) produce widespread neuropsychiatric effects including
+depression.” <em>Journal of Chemical Neuroanatomy</em>, 75,
+43-51.</p></li>
+<li><p>Foster, K.R., &amp; Moulder, J.E. (2013). “Wi-Fi and health:
+review of current status of research.” <em>Health Physics</em>, 105(6),
+561-575.</p></li>
+<li><p>Beason, R.C., &amp; Semm, P. (2002). “Does the avian ophthalmic
+nerve carry magnetic navigational information?” <em>Journal of
+Experimental Biology</em>, 205(20), 3267-3274.</p></li>
+<li><p>Elder, J.A., &amp; Chou, C.K. (2003). “Auditory response to
+pulsed radiofrequency energy.” <em>Bioelectromagnetics</em>, 24(S6),
+S162-S173.</p></li>
+<li><p>IEEE Standard C95.1 (2019). “IEEE Standard for Safety Levels with
+Respect to Human Exposure to Electric, Magnetic, and Electromagnetic
+Fields.”</p></li>
+<li><p>McLean, C. (2024). “Solving Havana Syndrome: Research
+Documentation and Analysis.”</p></li>
+</ol>
+<p><a href="#toc">↑ Back to Table of Contents</a></p>
+<hr />
+<p><a id="figures-index"></a> ## Figures Index</p>
+<table>
+<thead>
+<tr>
+<th>Figure</th>
+<th>Description</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Figure 1</td>
+<td>Cazzamalli’s Experiment Setup</td>
+<td><a href="#figure-1">View</a></td>
+</tr>
+<tr>
+<td>Figure 2</td>
+<td>RF Transmission and Reception Concept</td>
+<td><a href="#figure-2">View</a></td>
+</tr>
+<tr>
+<td>Figure 3</td>
+<td>SDR Equipment Setup</td>
+<td><a href="#figure-3">View</a></td>
+</tr>
+<tr>
+<td>Figure 4</td>
+<td>SDR# Interface</td>
+<td><a href="#figure-4">View</a></td>
+</tr>
+<tr>
+<td>Figure 5</td>
+<td>Detection Protocol Flowchart</td>
+<td><a href="#figure-5">View</a></td>
+</tr>
+<tr>
+<td>Figure 6</td>
+<td>Wideband Spectrum Scan</td>
+<td><a href="#figure-6">View</a></td>
+</tr>
+<tr>
+<td>Figure 7</td>
+<td>433 MHz Spectrum Detail</td>
+<td><a href="#figure-7">View</a></td>
+</tr>
+<tr>
+<td>Figure 8</td>
+<td>433 MHz Signal with Subject Present</td>
+<td><a href="#figure-8">View</a></td>
+</tr>
+<tr>
+<td>Figure 9</td>
+<td>Signal Analysis Waterfall</td>
+<td><a href="#figure-9">View</a></td>
+</tr>
+<tr>
+<td>Figure 10</td>
+<td>Decoded Signal Pattern</td>
+<td><a href="#figure-10">View</a></td>
+</tr>
+<tr>
+<td>Figure 11</td>
+<td>Cazzamalli’s Original Apparatus</td>
+<td><a href="#figure-11">View</a></td>
+</tr>
+<tr>
+<td>Figure 12</td>
+<td>Bio-Radar Block Diagram</td>
+<td><a href="#figure-12">View</a></td>
+</tr>
+<tr>
+<td>Figure 13</td>
+<td>Tissue Permittivity vs Frequency</td>
+<td><a href="#figure-13">View</a></td>
+</tr>
+<tr>
+<td>Figure 14</td>
+<td>RNM Concept Diagram</td>
+<td><a href="#figure-14">View</a></td>
+</tr>
+<tr>
+<td>Figure 15</td>
+<td>Neural Signal Processing Chain</td>
+<td><a href="#figure-15">View</a></td>
+</tr>
+<tr>
+<td>Figure 16</td>
+<td>Havana Syndrome Symptom Correlation</td>
+<td><a href="#figure-16">View</a></td>
+</tr>
+<tr>
+<td>Figure 17</td>
+<td>Summary of Detection Results</td>
+<td><a href="#figure-17">View</a></td>
+</tr>
+</tbody>
+</table>
+<p><a href="#toc">↑ Back to Table of Contents</a></p>
+<hr />
+<p><em>Document generated with hyperlinked navigation for cross-platform
+reading</em></p>
+<p><em>Copyright © Clint McLean. All rights reserved.</em></p>
+</body>
+</html>

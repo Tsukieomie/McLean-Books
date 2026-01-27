@@ -1,0 +1,232 @@
+/* McLean Book Styles */
+
+:root {
+  --primary-color: #1a365d;
+  --accent-color: #2c5282;
+  --text-color: #2d3748;
+  --bg-color: #ffffff;
+  --code-bg: #f7fafc;
+}
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--bg-color);
+}
+
+/* Title Page */
+h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  page-break-before: always;
+}
+
+h1:first-of-type {
+  page-break-before: avoid;
+  margin-top: 3rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.5rem;
+  margin-top: 3rem;
+  page-break-after: avoid;
+}
+
+h3 {
+  font-size: 1.35rem;
+  color: var(--primary-color);
+  margin-top: 2rem;
+}
+
+h4 {
+  font-size: 1.15rem;
+  color: var(--text-color);
+  font-style: italic;
+}
+
+/* Paragraphs */
+p {
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+/* Block quotes */
+blockquote {
+  border-left: 4px solid var(--accent-color);
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  background: #f0f4f8;
+  font-style: italic;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+/* Lists */
+ul, ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Images/Figures */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Figure captions */
+p strong:first-child {
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+th, td {
+  border: 1px solid #cbd5e0;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background: var(--primary-color);
+  color: white;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background: #f7fafc;
+}
+
+/* Code */
+code {
+  font-family: 'Monaco', 'Consolas', monospace;
+  background: var(--code-bg);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+pre {
+  background: var(--code-bg);
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 5px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Horizontal rules */
+hr {
+  border: none;
+  border-top: 1px solid #cbd5e0;
+  margin: 3rem 0;
+}
+
+/* Table of Contents */
+#TOC {
+  background: #f7fafc;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+#TOC ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+#TOC > ul {
+  padding-left: 0;
+}
+
+#TOC a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+#TOC a:hover {
+  text-decoration: underline;
+}
+
+/* Math equations */
+.math {
+  font-family: 'Times New Roman', serif;
+  font-style: italic;
+  overflow-x: auto;
+  padding: 0.5rem;
+}
+
+/* Print styles */
+@media print {
+  body {
+    max-width: none;
+    padding: 0;
+    font-size: 11pt;
+  }
+
+  h1 {
+    page-break-before: always;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+  img {
+    max-width: 80%;
+    page-break-inside: avoid;
+  }
+
+  blockquote {
+    page-break-inside: avoid;
+  }
+
+  table {
+    page-break-inside: avoid;
+  }
+}
+
+/* Links */
+a {
+  color: var(--accent-color);
+}
+
+/* Strong text */
+strong {
+  color: var(--primary-color);
+}
+
+/* Author info */
+p:nth-of-type(1), p:nth-of-type(2) {
+  text-align: center;
+}
