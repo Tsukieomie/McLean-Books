@@ -16,6 +16,7 @@ Research publications by **Clint McLean** on Havana Syndrome, RF biological effe
 | [BOOK2_DEEP_ANALYSIS.md](BOOK2_DEEP_ANALYSIS.md) | In-depth review of Book 2 |
 | [VIDEO_ANALYSIS.md](VIDEO_ANALYSIS.md) | Analysis of McLean's detection demo video |
 | [VIDEO_TRANSCRIPT.md](VIDEO_TRANSCRIPT.md) | Full cleaned transcript with timestamps |
+| [EQUIPMENT_GUIDE.md](EQUIPMENT_GUIDE.md) | Complete hardware/software buying guide |
 
 ---
 
@@ -88,6 +89,16 @@ Practical methodology for detecting electromagnetic frequencies that may affect 
 
 See [CODE_REPOSITORIES.md](CODE_REPOSITORIES.md) for detailed documentation.
 
+### HackRF Support Status
+
+McLean mentioned HackRF support as a planned feature in his 2020 video:
+
+> "I'm going to be modifying the code system that I wrote to also use these [HackRF]."
+
+**Investigation Result:** As of October 2023 (latest commits), **HackRF support has NOT been implemented**. Code search found zero HackRF references in either repository.
+
+**Workaround:** SDRReradiationSpectrumAnalyzer supports GNU Radio flowgraphs, which could theoretically connect to HackRF. See [EQUIPMENT_GUIDE.md](EQUIPMENT_GUIDE.md) for details.
+
 ---
 
 ## Video Resources
@@ -134,6 +145,7 @@ McLean-Books/
 ├── BOOK2_DEEP_ANALYSIS.md      # Deep analysis of Book 2
 ├── VIDEO_ANALYSIS.md           # YouTube video analysis
 ├── VIDEO_TRANSCRIPT.md         # Cleaned video transcript
+├── EQUIPMENT_GUIDE.md          # Hardware/software buying guide
 │
 ├── 01-Solving-Havana-Syndrome/
 │   ├── McLean_Solving_Havana_Syndrome.pdf
