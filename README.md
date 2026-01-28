@@ -15,6 +15,7 @@ Research publications by **Clint McLean** on Havana Syndrome, RF biological effe
 | [CODE_REPOSITORIES.md](CODE_REPOSITORIES.md) | Guide to McLean's GitHub code |
 | [BOOK2_DEEP_ANALYSIS.md](BOOK2_DEEP_ANALYSIS.md) | In-depth review of Book 2 |
 | [VIDEO_ANALYSIS.md](VIDEO_ANALYSIS.md) | Analysis of McLean's detection demo video |
+| [VIDEO_TRANSCRIPT.md](VIDEO_TRANSCRIPT.md) | Full cleaned transcript with timestamps |
 
 ---
 
@@ -96,11 +97,27 @@ See [CODE_REPOSITORIES.md](CODE_REPOSITORIES.md) for detailed documentation.
 | Field | Value |
 |-------|-------|
 | **Title** | Detection of frequency ranges used for electronic harassment |
+| **Channel** | The Science Of Electronic Harassment |
 | **Duration** | 8:51 |
+| **Upload Date** | August 15, 2020 |
 | **URL** | [Watch on YouTube](https://www.youtube.com/watch?v=sP4ZjyrfuUo) |
-| **Analysis** | [VIDEO_ANALYSIS.md](VIDEO_ANALYSIS.md) |
 
-This video demonstrates real-time RF detection at ~10 meters using RTL-SDR equipment and McLean's open-source software. Shows signal strength correlation when subject enters/exits the antenna's scanning region.
+**Documentation:**
+- [VIDEO_ANALYSIS.md](VIDEO_ANALYSIS.md) - Comprehensive analysis with equipment list, methodology, and assessment
+- [VIDEO_TRANSCRIPT.md](VIDEO_TRANSCRIPT.md) - Full cleaned transcript with timestamps and glossary
+
+**Video Summary:**
+
+This video demonstrates real-time RF detection at ~10 meters using RTL-SDR equipment and McLean's open-source software. Key findings:
+
+| Finding | Detail |
+|---------|--------|
+| Detection range | ~10 meters from detector |
+| Frequency range | 400-500 MHz (adult head resonance) |
+| Equipment cost | Under $100 total |
+| Correlation | Signal strength increases when subject enters detection region |
+
+The video serves as a practical demonstration of the detection methodology described in Book 2.
 
 ---
 
@@ -116,6 +133,7 @@ McLean-Books/
 ├── CODE_REPOSITORIES.md        # GitHub code documentation
 ├── BOOK2_DEEP_ANALYSIS.md      # Deep analysis of Book 2
 ├── VIDEO_ANALYSIS.md           # YouTube video analysis
+├── VIDEO_TRANSCRIPT.md         # Cleaned video transcript
 │
 ├── 01-Solving-Havana-Syndrome/
 │   ├── McLean_Solving_Havana_Syndrome.pdf
