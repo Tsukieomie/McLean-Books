@@ -24,6 +24,7 @@ A comprehensive research archive on **Havana Syndrome**, RF biological effects, 
 | If you want to... | Go to... |
 |-------------------|----------|
 | **See the smoking gun evidence** | [SMOKING_GUN_PATENT.md](SMOKING_GUN_PATENT.md) |
+| **Understand EEG-to-RF connection** | [EEG_RF_CONNECTION_AND_PATENT_EVOLUTION.md](EEG_RF_CONNECTION_AND_PATENT_EVOLUTION.md) |
 | **Get equipment and start detecting** | [EQUIPMENT_GUIDE.md](EQUIPMENT_GUIDE.md) |
 | **Understand the science in 5 minutes** | [QUICK_REFERENCE.md](QUICK_REFERENCE.md) |
 | **Review all RF/neural patents** | [PATENT_ANALYSIS.md](PATENT_ANALYSIS.md) |
@@ -47,6 +48,7 @@ A comprehensive research archive on **Havana Syndrome**, RF biological effects, 
 |----------|-------------|----------|
 | [SMOKING_GUN_PATENT.md](SMOKING_GUN_PATENT.md) | **Air Force RF hearing patent - definitive proof** | ⭐ Critical |
 | [TEMPERATURE_THRESHOLD_ANALYSIS.md](TEMPERATURE_THRESHOLD_ANALYSIS.md) | **Why safety standards fail - the 100,000x gap** | ⭐ Critical |
+| [EEG_RF_CONNECTION_AND_PATENT_EVOLUTION.md](EEG_RF_CONNECTION_AND_PATENT_EVOLUTION.md) | **EEG-to-RF bridge & unified patent timeline (1976-2024)** | ⭐ Critical |
 | [PATENT_ANALYSIS.md](PATENT_ANALYSIS.md) | Comprehensive analysis of 7 RF/neural patents | High |
 | [EEG_RESEARCH_ANALYSIS.md](EEG_RESEARCH_ANALYSIS.md) | External EEG research repository analysis | Medium |
 
@@ -247,6 +249,7 @@ McLean-Books/
 ├── CRITICAL RESEARCH
 │   ├── SMOKING_GUN_PATENT.md      # ⭐ Air Force patent deep dive
 │   ├── TEMPERATURE_THRESHOLD_ANALYSIS.md  # ⭐ The 100,000x gap explained
+│   ├── EEG_RF_CONNECTION_AND_PATENT_EVOLUTION.md  # ⭐ EEG-RF bridge + patent timeline
 │   ├── PATENT_ANALYSIS.md         # 7 RF/neural patents analyzed
 │   └── EEG_RESEARCH_ANALYSIS.md   # External EEG research review
 │
