@@ -4,13 +4,29 @@ A comprehensive research archive on **Havana Syndrome**, RF biological effects, 
 
 ---
 
+## The Smoking Gun
+
+> **US Patent 6,470,214** (Air Force, 2002) documents that the US military successfully transmitted **intelligible speech directly into human heads** via RF energy at Phillips Laboratory in **October 1994**.
+
+| What the Patent Proves | Evidence |
+|------------------------|----------|
+| RF can transmit audio into heads | "Subjects could recognize encoded messages" |
+| US military researched this | Assignee: **US Air Force** |
+| Technology works | Experiments conducted Oct 24, 1994 |
+| Mechanism is thermoelastic | Matches McLean's theory exactly |
+
+**[Read the full analysis →](SMOKING_GUN_PATENT.md)**
+
+---
+
 ## Quick Start
 
 | If you want to... | Go to... |
 |-------------------|----------|
+| **See the smoking gun evidence** | [SMOKING_GUN_PATENT.md](SMOKING_GUN_PATENT.md) |
 | **Get equipment and start detecting** | [EQUIPMENT_GUIDE.md](EQUIPMENT_GUIDE.md) |
 | **Understand the science in 5 minutes** | [QUICK_REFERENCE.md](QUICK_REFERENCE.md) |
-| **Review RF/neural patents** | [PATENT_ANALYSIS.md](PATENT_ANALYSIS.md) |
+| **Review all RF/neural patents** | [PATENT_ANALYSIS.md](PATENT_ANALYSIS.md) |
 | **Watch the detection demo** | [YouTube Video](https://www.youtube.com/watch?v=sP4ZjyrfuUo) |
 | **Read the full books** | [Book 1](01-Solving-Havana-Syndrome/) / [Book 2](02-Methods-for-Detecting/) |
 
@@ -25,6 +41,14 @@ A comprehensive research archive on **Havana Syndrome**, RF biological effects, 
 | **Book 1** | Solving Havana Syndrome (Hodgkin-Huxley Model) | [01-Solving-Havana-Syndrome/](01-Solving-Havana-Syndrome/) |
 | **Book 2** | Methods for Detecting RF Frequencies | [02-Methods-for-Detecting/](02-Methods-for-Detecting/) |
 
+### Research & Analysis
+
+| Document | Description | Priority |
+|----------|-------------|----------|
+| [SMOKING_GUN_PATENT.md](SMOKING_GUN_PATENT.md) | **Air Force RF hearing patent - definitive proof** | ⭐ Critical |
+| [PATENT_ANALYSIS.md](PATENT_ANALYSIS.md) | Comprehensive analysis of 7 RF/neural patents | High |
+| [EEG_RESEARCH_ANALYSIS.md](EEG_RESEARCH_ANALYSIS.md) | External EEG research repository analysis | Medium |
+
 ### Study Materials
 
 | Document | Description | Audience |
@@ -35,18 +59,11 @@ A comprehensive research archive on **Havana Syndrome**, RF biological effects, 
 | [DATA_TABLES.md](DATA_TABLES.md) | All extracted data tables | Research |
 | [BOOK2_DEEP_ANALYSIS.md](BOOK2_DEEP_ANALYSIS.md) | In-depth Book 2 review | Advanced |
 
-### Research & Analysis
-
-| Document | Description |
-|----------|-------------|
-| [PATENT_ANALYSIS.md](PATENT_ANALYSIS.md) | **NEW** - Comprehensive analysis of 7 RF/neural effect patents |
-| [EEG_RESEARCH_ANALYSIS.md](EEG_RESEARCH_ANALYSIS.md) | **NEW** - Analysis of external EEG research repository |
-
 ### Equipment & Hardware
 
 | Document | Description |
 |----------|-------------|
-| [EQUIPMENT_GUIDE.md](EQUIPMENT_GUIDE.md) | Complete hardware buying guide (RTL-SDR, HackRF, Portapack, antennas) |
+| [EQUIPMENT_GUIDE.md](EQUIPMENT_GUIDE.md) | Complete hardware buying guide (RTL-SDR, HackRF, Portapack, antennas, LNA) |
 | [HACKRF_INVESTIGATION.md](HACKRF_INVESTIGATION.md) | Deep investigation into HackRF support claims |
 
 ### Video Resources
@@ -73,6 +90,7 @@ A comprehensive research archive on **Havana Syndrome**, RF biological effects, 
 | Current RF safety threshold | +1°C | ICNIRP/IEEE standard |
 | McLean's minimum effect threshold | **+0.0001°C** | 10,000x below "safe" |
 | Neurons in error at +0.01°C | >20% | Network amplification |
+| Air Force patent temp change | ~10⁻⁵ °C | 100,000x below safety threshold |
 
 ### Human Resonant Frequencies
 
@@ -81,6 +99,7 @@ A comprehensive research archive on **Havana Syndrome**, RF biological effects, 
 | Adult head | **400-500 MHz** | ~60-75 cm |
 | Baby head | **~700 MHz** | ~43 cm |
 | Body (standing) | ~80 MHz | ~3.75 m |
+| Brunkan patent optimal | **1,000 MHz** | 30 cm |
 
 ### Detection Equipment
 
@@ -88,7 +107,34 @@ A comprehensive research archive on **Havana Syndrome**, RF biological effects, 
 |-------|------|------------|
 | Basic (RTL-SDR + antenna) | ~$50 | Low |
 | Standard (RTL-SDR + Yagi) | ~$100 | Medium |
-| Advanced (Portapack H4M+) | ~$150-250 | Medium |
+| Portable (Portapack H4M+) | ~$150-250 | Medium |
+| Advanced (HackRF + LNA) | ~$200-300 | High |
+
+---
+
+## Patent Evidence Summary
+
+### The 7 Key Patents
+
+| Patent | Year | Title | Assignee | Credibility |
+|--------|------|-------|----------|-------------|
+| **US6470214** | 2002 | **RF Hearing Effect** | **US Air Force** | ⭐⭐⭐⭐⭐ |
+| US4877027 | 1989 | Microwave Hearing System | Brunkan | ⭐⭐⭐⭐ |
+| US4858612 | 1989 | Microwave Hearing Device | Mentec AG | ⭐⭐⭐ |
+| US3951134 | 1976 | Remote Brain Monitoring | Dorne & Margolin | ⭐⭐ |
+| US6011991 | 2000 | Brain Wave Communication | Technology Patents | ⭐ |
+| US6506148 | 2003 | Neural Manipulation | Loos | ⭐⭐⭐ |
+| US5159703 | 1992 | Silent Subliminal | Lowery | ⭐⭐ |
+
+### What the Patents Prove
+
+| Capability | Patent Evidence |
+|------------|-----------------|
+| Transmit audio into head via RF | US6470214 - experimentally demonstrated 1994 |
+| Effective frequency range | 100 MHz - 10 GHz (US4877027) |
+| Mechanism | Thermoelastic expansion → acoustic waves |
+| Power levels | 3.3 mW/cm² (within "safe" limits) |
+| Government involvement | US Air Force assignee on US6470214 |
 
 ---
 
@@ -178,7 +224,7 @@ A comprehensive research archive on **Havana Syndrome**, RF biological effects, 
 | **Removed** | Jun 22, 2021 | Commit `b79f25d` |
 | Current | Jan 2025 | Auto-detection works |
 
-**The Smoking Gun:**
+**The Code Change:**
 ```diff
 - osmosdr.source( args="numchan=" + str(1) + " " + 'hackrf=0' )
 + osmosdr.source( args="numchan=" + str(1) + " " + "" )
@@ -195,6 +241,11 @@ McLean-Books/
 │
 ├── README.md                      # This file (index)
 │
+├── CRITICAL RESEARCH
+│   ├── SMOKING_GUN_PATENT.md      # ⭐ Air Force patent deep dive
+│   ├── PATENT_ANALYSIS.md         # 7 RF/neural patents analyzed
+│   └── EEG_RESEARCH_ANALYSIS.md   # External EEG research review
+│
 ├── STUDY MATERIALS
 │   ├── STUDY_NOTES.md             # Chapter-by-chapter analysis
 │   ├── QUICK_REFERENCE.md         # One-page reference
@@ -202,12 +253,8 @@ McLean-Books/
 │   ├── DATA_TABLES.md             # Extracted data tables
 │   └── BOOK2_DEEP_ANALYSIS.md     # Deep analysis of Book 2
 │
-├── RESEARCH & ANALYSIS (NEW)
-│   ├── PATENT_ANALYSIS.md         # 7 RF/neural patents analyzed
-│   └── EEG_RESEARCH_ANALYSIS.md   # External EEG research review
-│
 ├── EQUIPMENT & HARDWARE
-│   ├── EQUIPMENT_GUIDE.md         # Hardware buying guide
+│   ├── EQUIPMENT_GUIDE.md         # Hardware buying guide + LNA section
 │   └── HACKRF_INVESTIGATION.md    # HackRF deep dive
 │
 ├── VIDEO RESOURCES
@@ -226,6 +273,20 @@ McLean-Books/
 │       ├── *.pdf, *.epub, *.mobi, *.azw3, *.docx, *.md, *.html
 │       └── figures/ (18 figures)
 ```
+
+---
+
+## Commit History Highlights
+
+| Commit | Description |
+|--------|-------------|
+| `68e7865` | Add patent analysis and EEG research review |
+| `b6757b4` | Add comprehensive LNA guide and sensitivity analysis |
+| `730be22` | Reorganize repo and add Portapack H4M+ guide |
+| `0ad5645` | Debunk '10x better' HackRF claim |
+| `4580cba` | Deep investigation: HackRF was IMPLEMENTED then REMOVED |
+| `5014fe7` | Add HackRF investigation findings |
+| `b5d4910` | Add EQUIPMENT_GUIDE |
 
 ---
 
@@ -252,5 +313,5 @@ McLean-Books/
 
 ---
 
-*Repository maintained by Tsukieomie*
+*Repository maintained for research and educational purposes*
 *Last updated: January 2025*
