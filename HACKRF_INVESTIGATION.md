@@ -247,6 +247,52 @@ This was never done and probably never will be.
 
 ---
 
+## Debunking the "10x Better" Claim
+
+McLean also claimed HackRF is "10x better" than RTL-SDR. This is misleading.
+
+### Technical Reality
+
+| Specification | RTL-SDR | HackRF One | Reality |
+|---------------|---------|------------|---------|
+| **Bandwidth** | 2.4 MHz | 20 MHz | **8x** (source of "10x" claim) |
+| **Sample Rate** | 2.4 MS/s | 20 MS/s | **8x** (source of "10x" claim) |
+| Frequency Range | 25 MHz - 1.7 GHz | 1 MHz - 6 GHz | ~3.5x wider |
+| ADC Resolution | **8-bit** | **8-bit** | **Same** |
+| Dynamic Range | ~48 dB | ~48-52 dB | **Nearly identical** |
+| Sensitivity | Good | Similar | **RTL-SDR often better** |
+| Front-end Filtering | Basic | **None** | RTL-SDR better |
+| Price | ~$35 | $70-350 | RTL-SDR 2-10x cheaper |
+
+### What "10x" Actually Means
+
+The "10x" refers to **bandwidth** (20 MHz vs 2.4 MHz ≈ 8x, rounded to 10x).
+
+It does **NOT** mean:
+- 10x better sensitivity
+- 10x better signal quality
+- 10x better at detecting reradiation
+
+### Expert Consensus
+
+From [rtl-sdr.com HackRF review](https://www.rtl-sdr.com/hackrf-initial-review/):
+> "Overall reception sensitivity seems to be very similar to the RTL-SDR."
+> "The HackRF has no front end filtering (preselectors) so there are many images of strong signals."
+
+From [RadioReference forums](https://forums.radioreference.com/threads/hackonerf-vs-rtl-sdrv3-on-rx.475196/):
+> "I could hear NYC police dispatches easily with the RTL-SDR while the HackRF was deaf from NJ."
+
+### For McLean's Application
+
+For reradiation detection at 400-500 MHz (narrowband signals):
+- **RTL-SDR** is equally effective
+- **HackRF** bandwidth advantage is irrelevant (signals are narrowband)
+- **RTL-SDR** is 10x cheaper
+
+**Verdict:** The "10x better" claim is marketing hype, not technical reality. For this specific application, RTL-SDR is the practical choice.
+
+---
+
 ## Conclusion
 
 The HackRF investigation reveals a nuanced story:

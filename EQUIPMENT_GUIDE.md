@@ -81,11 +81,35 @@ A comprehensive guide to hardware and software for replicating Clint McLean's RF
 | [Lab401](https://lab401.com/products/hackrf-one) | HackRF One Rev 10 | ~$350 |
 | AliExpress (various) | Clone/compatible versions | ~$70 |
 
-**Why "10x Better":**
-- **Wider frequency coverage** (1 MHz - 6 GHz vs 25 MHz - 1.7 GHz)
-- **Higher sample rates** (20 MS/s vs 2.4 MS/s)
-- **Transmit capability** for future research
-- **Better sensitivity** for weak signal detection
+**Analysis of "10x Better" Claim:**
+
+McLean claimed HackRF is "10x better" but this is misleading. Here's the reality:
+
+| Specification | RTL-SDR | HackRF One | Ratio | Notes |
+|---------------|---------|------------|-------|-------|
+| Frequency Range | 25 MHz - 1.7 GHz | 1 MHz - 6 GHz | ~3.5x | HackRF wins |
+| **Bandwidth** | 2.4 MHz | 20 MHz | **~8x** | Likely source of "10x" claim |
+| **Sample Rate** | 2.4 MS/s | 20 MS/s | **~8x** | Likely source of "10x" claim |
+| ADC Resolution | 8-bit | 8-bit | 1x | **Same** |
+| Dynamic Range | ~48 dB | ~48-52 dB | ~1x | **Nearly identical** |
+| Sensitivity | Good | Similar/Worse | ~1x | **RTL-SDR often better** |
+| TX Capability | No | Yes | N/A | HackRF only |
+| Price | ~$35 | $70-350 | 2-10x | RTL-SDR much cheaper |
+
+**Where "10x" Comes From:**
+- **Bandwidth (8x)** - 20 MHz vs 2.4 MHz (rounded to 10x)
+- **Sample rate (8x)** - 20 MS/s vs 2.4 MS/s
+
+**What's NOT 10x Better:**
+- **Sensitivity** - Actually similar or WORSE than RTL-SDR in many tests
+- **Dynamic range** - Both ~48 dB (8-bit ADC limitation)
+- **Noise floor** - Both have similar noise performance
+
+**Expert Opinion ([rtl-sdr.com](https://www.rtl-sdr.com/hackrf-initial-review/)):**
+> "Overall reception sensitivity seems to be very similar to the RTL-SDR."
+> "The HackRF has no front end filtering (preselectors) so there are many images of strong signals."
+
+**Bottom Line:** HackRF has ~8x more bandwidth, but NOT better sensitivity. For McLean's reradiation detection (narrowband signals at 400-500 MHz), RTL-SDR is equally effective and 10x cheaper
 
 ---
 

@@ -38,7 +38,7 @@ This video by Clint McLean is a **practical demonstration** of the RF detection 
 ### Equipment Links (from video description)
 
 - **RTL-SDR**: https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/
-- **HackRF (recommended upgrade)**: ~$70 (AliExpress) - 10x better than RTL-SDR
+- **HackRF (recommended upgrade)**: ~$70 (AliExpress) - McLean claimed "10x better" but see [EQUIPMENT_GUIDE.md](EQUIPMENT_GUIDE.md) for reality check
 - **Yagi antenna**: AliExpress ~$59
 - **DIY Yagi tutorials**: YouTube links provided
 - **Yagi dimension calculator**: http://www.k7mem.com/Ant_Yagi_VHF_Quick.html
