@@ -10,6 +10,7 @@ A comprehensive research archive on **Havana Syndrome**, RF biological effects, 
 |-------------------|----------|
 | **Get equipment and start detecting** | [EQUIPMENT_GUIDE.md](EQUIPMENT_GUIDE.md) |
 | **Understand the science in 5 minutes** | [QUICK_REFERENCE.md](QUICK_REFERENCE.md) |
+| **Review RF/neural patents** | [PATENT_ANALYSIS.md](PATENT_ANALYSIS.md) |
 | **Watch the detection demo** | [YouTube Video](https://www.youtube.com/watch?v=sP4ZjyrfuUo) |
 | **Read the full books** | [Book 1](01-Solving-Havana-Syndrome/) / [Book 2](02-Methods-for-Detecting/) |
 
@@ -33,6 +34,13 @@ A comprehensive research archive on **Havana Syndrome**, RF biological effects, 
 | [PRESENTATION.md](PRESENTATION.md) | 21-slide presentation deck | Teaching |
 | [DATA_TABLES.md](DATA_TABLES.md) | All extracted data tables | Research |
 | [BOOK2_DEEP_ANALYSIS.md](BOOK2_DEEP_ANALYSIS.md) | In-depth Book 2 review | Advanced |
+
+### Research & Analysis
+
+| Document | Description |
+|----------|-------------|
+| [PATENT_ANALYSIS.md](PATENT_ANALYSIS.md) | **NEW** - Comprehensive analysis of 7 RF/neural effect patents |
+| [EEG_RESEARCH_ANALYSIS.md](EEG_RESEARCH_ANALYSIS.md) | **NEW** - Analysis of external EEG research repository |
 
 ### Equipment & Hardware
 
@@ -193,6 +201,10 @@ McLean-Books/
 │   ├── PRESENTATION.md            # Slide deck (21 slides)
 │   ├── DATA_TABLES.md             # Extracted data tables
 │   └── BOOK2_DEEP_ANALYSIS.md     # Deep analysis of Book 2
+│
+├── RESEARCH & ANALYSIS (NEW)
+│   ├── PATENT_ANALYSIS.md         # 7 RF/neural patents analyzed
+│   └── EEG_RESEARCH_ANALYSIS.md   # External EEG research review
 │
 ├── EQUIPMENT & HARDWARE
 │   ├── EQUIPMENT_GUIDE.md         # Hardware buying guide
