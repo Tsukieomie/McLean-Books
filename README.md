@@ -13,6 +13,7 @@ Research publications by **Clint McLean** on Havana Syndrome, RF biological effe
 | [PRESENTATION.md](PRESENTATION.md) | Slide deck for presentations |
 | [DATA_TABLES.md](DATA_TABLES.md) | All extracted data and tables |
 | [CODE_REPOSITORIES.md](CODE_REPOSITORIES.md) | Guide to McLean's GitHub code |
+| [BOOK2_DEEP_ANALYSIS.md](BOOK2_DEEP_ANALYSIS.md) | In-depth review of Book 2 |
 
 ---
 
