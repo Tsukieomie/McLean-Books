@@ -46,6 +46,7 @@ A comprehensive research archive on **Havana Syndrome**, RF biological effects, 
 | Document | Description | Priority |
 |----------|-------------|----------|
 | [SMOKING_GUN_PATENT.md](SMOKING_GUN_PATENT.md) | **Air Force RF hearing patent - definitive proof** | ⭐ Critical |
+| [TEMPERATURE_THRESHOLD_ANALYSIS.md](TEMPERATURE_THRESHOLD_ANALYSIS.md) | **Why safety standards fail - the 100,000x gap** | ⭐ Critical |
 | [PATENT_ANALYSIS.md](PATENT_ANALYSIS.md) | Comprehensive analysis of 7 RF/neural patents | High |
 | [EEG_RESEARCH_ANALYSIS.md](EEG_RESEARCH_ANALYSIS.md) | External EEG research repository analysis | Medium |
 
@@ -83,14 +84,16 @@ A comprehensive research archive on **Havana Syndrome**, RF biological effects, 
 
 ## Key Facts at a Glance
 
-### The Science
+### The Science: The Temperature Gap
 
-| Fact | Value | Significance |
-|------|-------|--------------|
-| Current RF safety threshold | +1°C | ICNIRP/IEEE standard |
-| McLean's minimum effect threshold | **+0.0001°C** | 10,000x below "safe" |
-| Neurons in error at +0.01°C | >20% | Network amplification |
-| Air Force patent temp change | ~10⁻⁵ °C | 100,000x below safety threshold |
+| Source | Temperature | Factor Below "Safe" |
+|--------|-------------|---------------------|
+| ICNIRP/IEEE safety threshold | 1°C | Baseline |
+| McLean neural effects begin | **0.0001°C** | **10,000x below** |
+| Air Force patent (RF hearing) | 0.00001°C | **100,000x below** |
+| Frey effect threshold | 0.000005°C | **200,000x below** |
+
+**The gap:** Safety standards protect against burns, not neural interference. [Full analysis →](TEMPERATURE_THRESHOLD_ANALYSIS.md)
 
 ### Human Resonant Frequencies
 
@@ -243,6 +246,7 @@ McLean-Books/
 │
 ├── CRITICAL RESEARCH
 │   ├── SMOKING_GUN_PATENT.md      # ⭐ Air Force patent deep dive
+│   ├── TEMPERATURE_THRESHOLD_ANALYSIS.md  # ⭐ The 100,000x gap explained
 │   ├── PATENT_ANALYSIS.md         # 7 RF/neural patents analyzed
 │   └── EEG_RESEARCH_ANALYSIS.md   # External EEG research review
 │
