@@ -14,6 +14,7 @@ Research publications by **Clint McLean** on Havana Syndrome, RF biological effe
 | [DATA_TABLES.md](DATA_TABLES.md) | All extracted data and tables |
 | [CODE_REPOSITORIES.md](CODE_REPOSITORIES.md) | Guide to McLean's GitHub code |
 | [BOOK2_DEEP_ANALYSIS.md](BOOK2_DEEP_ANALYSIS.md) | In-depth review of Book 2 |
+| [VIDEO_ANALYSIS.md](VIDEO_ANALYSIS.md) | Analysis of McLean's detection demo video |
 
 ---
 
@@ -88,6 +89,21 @@ See [CODE_REPOSITORIES.md](CODE_REPOSITORIES.md) for detailed documentation.
 
 ---
 
+## Video Resources
+
+### Detection Demonstration Video
+
+| Field | Value |
+|-------|-------|
+| **Title** | Detection of frequency ranges used for electronic harassment |
+| **Duration** | 8:51 |
+| **URL** | [Watch on YouTube](https://www.youtube.com/watch?v=sP4ZjyrfuUo) |
+| **Analysis** | [VIDEO_ANALYSIS.md](VIDEO_ANALYSIS.md) |
+
+This video demonstrates real-time RF detection at ~10 meters using RTL-SDR equipment and McLean's open-source software. Shows signal strength correlation when subject enters/exits the antenna's scanning region.
+
+---
+
 ## Repository Contents
 
 ```
@@ -98,6 +114,8 @@ McLean-Books/
 ├── PRESENTATION.md             # Slide deck (21 slides)
 ├── DATA_TABLES.md              # All extracted data tables
 ├── CODE_REPOSITORIES.md        # GitHub code documentation
+├── BOOK2_DEEP_ANALYSIS.md      # Deep analysis of Book 2
+├── VIDEO_ANALYSIS.md           # YouTube video analysis
 │
 ├── 01-Solving-Havana-Syndrome/
 │   ├── McLean_Solving_Havana_Syndrome.pdf
