@@ -96,25 +96,35 @@ McLean mentioned HackRF support as a planned feature in his August 2020 video:
 
 > "I'm going to be modifying the code system that I wrote to also use these [HackRF]."
 
-**Investigation Result:** As of January 2025, **HackRF support was NEVER implemented** despite 4+ years passing since the claim.
+**Deep Investigation Result (January 2025):** The real story is more complex than it appears.
 
-| Finding | Detail |
+| Phase | Date | Status |
+|-------|------|--------|
+| Claim made | Aug 2020 | HackRF support promised |
+| **IMPLEMENTED** | ~2020-2021 | Via `hackrf=0` in GNU Radio flowgraph |
+| **REMOVED** | Jun 22, 2021 | Commit `b79f25d` removed HackRF-specific code |
+| Current | Jan 2025 | Auto-detection works, explicit support gone |
+
+**The Smoking Gun - Commit b79f25d:**
+```diff
+- self.osmosdr_source_0 = osmosdr.source( args="numchan=" + str(1) + " " + 'hackrf=0' )
++ self.osmosdr_source_0 = osmosdr.source( args="numchan=" + str(1) + " " + "" )
+```
+
+**Why It Was Removed:**
+McLean removed explicit HackRF targeting to enable generic device auto-detection, making the software work with ANY osmosdr-compatible SDR (RTL-SDR, HackRF, Airspy, etc.).
+
+**Current Status:**
+
+| Feature | Status |
 |---------|--------|
-| Code search | Zero HackRF references in either repository |
-| Last commits | May 2019 (SDRSpectrumAnalyzer), Oct 2023 (Reradiation) |
-| Branches | No HackRF-related branches exist |
-| Native support | Not implemented |
+| RTL-SDR Native | Fully implemented |
+| HackRF via GNU Radio | Works (auto-detected) |
+| HackRF Native (C/C++) | Not implemented |
 
-**Why It Was Never Implemented:**
+**The Real Story:** HackRF support was implemented, then deliberately changed to device-agnostic auto-detection. It still works—just not explicitly.
 
-1. **API Incompatibility** - RTL-SDR uses `librtlsdr`, HackRF requires different `libhackrf` or SoapySDR
-2. **Sample Rate Mismatch** - Analyzer uses 2.048 MS/s; HackRF only supports 1 MHz increments
-3. **Architectural Lock-in** - `DeviceReceiver.cpp` is tightly coupled to RTL-SDR functions
-4. **Workaround Sufficiency** - GNU Radio bridge made native support low priority
-
-**Workaround:** SDRReradiationSpectrumAnalyzer accepts UDP input from GNU Radio, enabling HackRF via a Python bridge script.
-
-See [HACKRF_INVESTIGATION.md](HACKRF_INVESTIGATION.md) for the full technical investigation and [EQUIPMENT_GUIDE.md](EQUIPMENT_GUIDE.md) for setup instructions.
+See [HACKRF_INVESTIGATION.md](HACKRF_INVESTIGATION.md) for the complete technical investigation with commit evidence.
 
 ---
 
