@@ -8,6 +8,9 @@ A comprehensive guide to hardware and software for replicating Clint McLean's RF
 
 1. [Quick Start Budget](#quick-start-budget)
 2. [SDR Receivers](#sdr-receivers)
+   - [RTL-SDR](#rtl-sdr-35)
+   - [HackRF One](#hackrf-one-70-200)
+   - [Portapack H4M+](#portapack-h4m-with-hackrf-150-250)
 3. [Antennas](#antennas)
 4. [DIY 450MHz Yagi Antenna](#diy-450mhz-yagi-antenna)
 5. [EMF Meters](#emf-meters)
@@ -19,12 +22,13 @@ A comprehensive guide to hardware and software for replicating Clint McLean's RF
 
 ## Quick Start Budget
 
-| Budget | Configuration | Components |
-|--------|---------------|------------|
-| **~$50** | Minimum | RTL-SDR + telescoping antenna |
-| **~$100** | Recommended | RTL-SDR + commercial Yagi |
-| **~$150** | Better | RTL-SDR + Yagi + NanoVNA |
-| **~$250** | Advanced | HackRF One + Yagi + NanoVNA |
+| Budget | Configuration | Components | Computer Needed? |
+|--------|---------------|------------|------------------|
+| **~$50** | Minimum | RTL-SDR + telescoping antenna | Yes |
+| **~$100** | Recommended | RTL-SDR + commercial Yagi | Yes |
+| **~$150** | Portable | **Portapack H4M+** (standalone) | **No** |
+| **~$200** | Portable+ | Portapack H4M+ + Yagi | **No** |
+| **~$250** | Advanced | HackRF One + Yagi + NanoVNA | Yes |
 
 ---
 
@@ -110,6 +114,97 @@ McLean claimed HackRF is "10x better" but this is misleading. Here's the reality
 > "The HackRF has no front end filtering (preselectors) so there are many images of strong signals."
 
 **Bottom Line:** HackRF has ~8x more bandwidth, but NOT better sensitivity. For McLean's reradiation detection (narrowband signals at 400-500 MHz), RTL-SDR is equally effective and 10x cheaper
+
+---
+
+### Portapack H4M+ with HackRF (~$150-250)
+
+**Best standalone option - no computer required in the field.**
+
+The Portapack H4M+ is an add-on board that transforms HackRF One into a fully portable, standalone device with built-in display and spectrum analyzer.
+
+| Spec | Value |
+|------|-------|
+| Frequency Range | 1 MHz - 6 GHz |
+| Display | 3.2" matte touchscreen (240x320) |
+| Battery | 2500 mAh lithium (built-in) |
+| Operation | Standalone or USB-connected |
+| Firmware | Mayhem (pre-installed) |
+| Audio | Built-in speaker + mic |
+| Storage | MicroSD slot (card not included) |
+
+**Where to Buy:**
+
+| Retailer | Product | Price |
+|----------|---------|-------|
+| [Amazon (SUOGOEST)](https://www.amazon.com/SUOGOEST-Signature-Transparent-Electronics-Engineering/dp/B0FJF8JSNY/) | H4M+ Mayhem Edition | ~$150 |
+| [OpenSourceSDRLab](https://opensourcesdrlab.com/products/h4m-receiver-and-spectrum-analyzer) | H4M+ Kit | ~$150-200 |
+| [Lab401](https://lab401.com/products/portapack-h4m) | H4M + HackRF Bundle | ~$300 |
+| [Hacker Warehouse](https://hackerwarehouse.com/product/hackrf-portapack-h4m-combo/) | H4M Combo | ~$250 |
+
+**What's Included (typical kit):**
+
+| Item | Purpose |
+|------|---------|
+| Portapack H4M | Main unit with display |
+| HackRF One R10C | Built-in SDR transceiver |
+| Transparent shell | Protective case |
+| 20dB LNA | Low noise amplifier (50 MHz - 6 GHz) |
+| Telescopic antenna | 40 MHz - 6 GHz general purpose |
+| GSM/3G/4G antenna | Cellular bands |
+| 2.4/5/5.8 GHz blade | WiFi/Bluetooth |
+| 700-2700 MHz whip | UHF/cellular |
+| SMA cable | LNA connection |
+| USB-C cable | Charging/data |
+
+**Mayhem Firmware Features:**
+
+| Feature | Description |
+|---------|-------------|
+| Spectrum Analyzer | Real-time RF visualization |
+| Signal Scanner | Auto-scan frequency ranges |
+| Audio RX | AM/FM/SSB demodulation |
+| Replay Attack | Record and replay RF signals |
+| Signal Generator | Create test signals |
+| ADS-B/AIS | Aircraft and ship tracking |
+| POCSAG/Weather | Pager and weather decoding |
+
+**For McLean's Detection Method:**
+
+| Aspect | Assessment |
+|--------|------------|
+| 400-500 MHz coverage | **Yes** - fully covered |
+| Spectrum analysis | **Built-in** on device |
+| Portability | **Excellent** - walk around while monitoring |
+| McLean's software | **No** - won't run his software directly |
+| Alternative approach | Use built-in spectrum analyzer |
+
+**Pros:**
+- Fully portable (no laptop needed)
+- Built-in spectrum analyzer
+- Large touchscreen display
+- Battery powered
+- Multiple antennas included
+- LNA for weak signal boost
+
+**Cons:**
+- Won't run McLean's specific software
+- More complex than RTL-SDR
+- Requires MicroSD card (not included)
+- Overkill for basic detection
+
+**Quick Start for Reradiation Detection:**
+
+1. Charge fully via USB-C
+2. Insert MicroSD card (32GB+ recommended)
+3. Power on (side button)
+4. Navigate: **Receive → Spectrum**
+5. Set frequency range: 400-500 MHz
+6. Attach telescopic antenna
+7. Enable LNA if signals are weak
+8. Walk around and observe signal changes
+
+**Tip:** The included telescopic antenna covers 400-500 MHz. For directional detection like McLean demonstrated, add a UHF Yagi antenna (~$30-60).
 
 ---
 
