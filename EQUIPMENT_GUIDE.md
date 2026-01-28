@@ -11,12 +11,13 @@ A comprehensive guide to hardware and software for replicating Clint McLean's RF
    - [RTL-SDR](#rtl-sdr-35)
    - [HackRF One](#hackrf-one-70-200)
    - [Portapack H4M+](#portapack-h4m-with-hackrf-150-250)
-3. [Antennas](#antennas)
-4. [DIY 450MHz Yagi Antenna](#diy-450mhz-yagi-antenna)
-5. [EMF Meters](#emf-meters)
-6. [Software](#software)
-7. [HackRF Support Status](#hackrf-support-status)
-8. [Complete Setup Configurations](#complete-setup-configurations)
+3. [Low Noise Amplifiers (LNA)](#low-noise-amplifiers-lna)
+4. [Antennas](#antennas)
+5. [DIY 450MHz Yagi Antenna](#diy-450mhz-yagi-antenna)
+6. [EMF Meters](#emf-meters)
+7. [Software](#software)
+8. [HackRF Support Status](#hackrf-support-status)
+9. [Complete Setup Configurations](#complete-setup-configurations)
 
 ---
 
@@ -205,6 +206,110 @@ The Portapack H4M+ is an add-on board that transforms HackRF One into a fully po
 8. Walk around and observe signal changes
 
 **Tip:** The included telescopic antenna covers 400-500 MHz. For directional detection like McLean demonstrated, add a UHF Yagi antenna (~$30-60).
+
+---
+
+## Low Noise Amplifiers (LNA)
+
+### Why LNA Matters
+
+An LNA (Low Noise Amplifier) placed near the antenna can **significantly improve weak signal detection** by amplifying signals before noise is introduced by cables and the SDR's internal electronics.
+
+### The Sensitivity Problem
+
+| SDR | Noise Figure (alone) | Sensitivity |
+|-----|----------------------|-------------|
+| RTL-SDR | ~6-8 dB | Good |
+| HackRF One | ~10-12 dB | Poor |
+| HackRF + 20dB LNA | ~2-3 dB | **Excellent** |
+
+**Key insight:** HackRF alone is worse than RTL-SDR for sensitivity, but **HackRF + LNA beats RTL-SDR**.
+
+### Portapack H4M+ Included LNA
+
+Your kit includes a **20dB LNA (50 MHz - 6 GHz)**. This changes the equation:
+
+| Setup | Noise Figure | vs RTL-SDR |
+|-------|--------------|------------|
+| HackRF alone | ~10-12 dB | **Worse** |
+| HackRF + 20dB LNA | ~2-3 dB | **Better** |
+| RTL-SDR alone | ~6-8 dB | Baseline |
+| RTL-SDR + LNA | ~1-2 dB | Best |
+
+**Expected improvement with LNA: 6-9 dB** (significant for weak signal detection)
+
+### Optimal LNA Placement
+
+```
+BEST:   [Antenna] → [LNA] → [Cable] → [SDR]
+                      ↑
+              Close to antenna
+
+WORST:  [Antenna] → [Cable] → [LNA] → [SDR]
+                                 ↑
+                    Signal already degraded
+```
+
+**Rule:** Place LNA as close to the antenna as possible.
+
+### Recommended Setup for 400-500 MHz
+
+**Optimal (with bandpass filter):**
+```
+[Yagi] → [400-500 MHz Bandpass Filter] → [20dB LNA] → [Portapack]
+```
+
+**Standard (what's included):**
+```
+[Telescopic Antenna] → [20dB LNA] → [Portapack]
+```
+
+### When to Use LNA
+
+| Scenario | Use LNA? | Reason |
+|----------|----------|--------|
+| Hunting weak reradiation signals | **Yes** | Improves sensitivity |
+| Long antenna cable (>3m) | **Yes** | Compensates for cable loss |
+| Rural/quiet RF environment | **Yes** | Maximize weak signal detection |
+| Urban/strong signal environment | **No** | Risk of overload |
+| Near cell towers/transmitters | **No** | Risk of saturation/damage |
+
+### LNA Safety Warnings
+
+| Risk | Details | Prevention |
+|------|---------|------------|
+| **Overload** | HackRF input damage at +13 dBm | Remove LNA near strong signals |
+| **Saturation** | Display clips/distorts | Reduce gain or remove LNA |
+| **Interference** | LNA amplifies ALL signals | Use bandpass filter |
+
+**From [GPIO Labs](https://gpio.com/blogs/news/amplifier-for-hackrf):**
+> "An LNA will amplify all signals present at its input... Use a band pass filter to block strong out-of-band signals."
+
+### Where to Buy Additional LNAs
+
+| Product | Frequency | Gain | Price |
+|---------|-----------|------|-------|
+| [Nooelec Lana](https://www.nooelec.com/store/lana.html) | 20 MHz - 4 GHz | 20 dB | ~$25 |
+| [RTL-SDR Blog LNA](https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/) | Wideband | 20 dB | ~$20 |
+| [GPIO Labs LNA](https://gpio.com/products/low-noise-amplifier-10-6000-mhz-gain-20-db) | 10 MHz - 6 GHz | 20 dB | ~$35 |
+
+### Quick Start: Using Your Included LNA
+
+1. **Test without LNA first** - Check for strong signals
+2. **Connect:** Antenna → LNA → SMA cable → Portapack
+3. **Power:** LNA via USB or Portapack bias-T (if supported)
+4. **Monitor:** Watch for signal improvement
+5. **If saturated:** Remove LNA, environment too noisy
+
+### Bottom Line
+
+| Configuration | Weak Signal Performance | Cost |
+|---------------|------------------------|------|
+| RTL-SDR alone | Good | $35 |
+| HackRF alone | Poor | $150+ |
+| **HackRF + LNA (your setup)** | **Excellent** | $150+ (LNA included) |
+
+Your Portapack H4M+ with the included 20dB LNA is **legitimately better** than standalone RTL-SDR for weak signal detection like McLean's reradiation method.
 
 ---
 

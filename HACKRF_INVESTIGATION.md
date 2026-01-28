@@ -291,6 +291,25 @@ For reradiation detection at 400-500 MHz (narrowband signals):
 
 **Verdict:** The "10x better" claim is marketing hype, not technical reality. For this specific application, RTL-SDR is the practical choice.
 
+### The LNA Exception
+
+However, when using an **external Low Noise Amplifier (LNA)**, HackRF becomes competitive:
+
+| Setup | Noise Figure | Sensitivity |
+|-------|--------------|-------------|
+| RTL-SDR alone | ~6-8 dB | Good |
+| HackRF alone | ~10-12 dB | Poor |
+| **HackRF + 20dB LNA** | ~2-3 dB | **Excellent** |
+
+**Key finding:** The Portapack H4M+ kit includes a 20dB LNA. With this LNA:
+- HackRF noise figure drops from ~10-12 dB to ~2-3 dB
+- Sensitivity improves by 6-9 dB
+- **HackRF + LNA outperforms standalone RTL-SDR**
+
+So while McLean's "10x better" claim about HackRF alone is false, **HackRF + LNA is legitimately better** for weak signal detection.
+
+See [EQUIPMENT_GUIDE.md](EQUIPMENT_GUIDE.md#low-noise-amplifiers-lna) for detailed LNA usage instructions.
+
 ---
 
 ## Conclusion
