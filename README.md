@@ -17,6 +17,7 @@ Research publications by **Clint McLean** on Havana Syndrome, RF biological effe
 | [VIDEO_ANALYSIS.md](VIDEO_ANALYSIS.md) | Analysis of McLean's detection demo video |
 | [VIDEO_TRANSCRIPT.md](VIDEO_TRANSCRIPT.md) | Full cleaned transcript with timestamps |
 | [EQUIPMENT_GUIDE.md](EQUIPMENT_GUIDE.md) | Complete hardware/software buying guide |
+| [HACKRF_INVESTIGATION.md](HACKRF_INVESTIGATION.md) | Investigation into unfulfilled HackRF claim |
 
 ---
 
@@ -91,13 +92,29 @@ See [CODE_REPOSITORIES.md](CODE_REPOSITORIES.md) for detailed documentation.
 
 ### HackRF Support Status
 
-McLean mentioned HackRF support as a planned feature in his 2020 video:
+McLean mentioned HackRF support as a planned feature in his August 2020 video:
 
 > "I'm going to be modifying the code system that I wrote to also use these [HackRF]."
 
-**Investigation Result:** As of October 2023 (latest commits), **HackRF support has NOT been implemented**. Code search found zero HackRF references in either repository.
+**Investigation Result:** As of January 2025, **HackRF support was NEVER implemented** despite 4+ years passing since the claim.
 
-**Workaround:** SDRReradiationSpectrumAnalyzer supports GNU Radio flowgraphs, which could theoretically connect to HackRF. See [EQUIPMENT_GUIDE.md](EQUIPMENT_GUIDE.md) for details.
+| Finding | Detail |
+|---------|--------|
+| Code search | Zero HackRF references in either repository |
+| Last commits | May 2019 (SDRSpectrumAnalyzer), Oct 2023 (Reradiation) |
+| Branches | No HackRF-related branches exist |
+| Native support | Not implemented |
+
+**Why It Was Never Implemented:**
+
+1. **API Incompatibility** - RTL-SDR uses `librtlsdr`, HackRF requires different `libhackrf` or SoapySDR
+2. **Sample Rate Mismatch** - Analyzer uses 2.048 MS/s; HackRF only supports 1 MHz increments
+3. **Architectural Lock-in** - `DeviceReceiver.cpp` is tightly coupled to RTL-SDR functions
+4. **Workaround Sufficiency** - GNU Radio bridge made native support low priority
+
+**Workaround:** SDRReradiationSpectrumAnalyzer accepts UDP input from GNU Radio, enabling HackRF via a Python bridge script.
+
+See [HACKRF_INVESTIGATION.md](HACKRF_INVESTIGATION.md) for the full technical investigation and [EQUIPMENT_GUIDE.md](EQUIPMENT_GUIDE.md) for setup instructions.
 
 ---
 
@@ -146,6 +163,7 @@ McLean-Books/
 ├── VIDEO_ANALYSIS.md           # YouTube video analysis
 ├── VIDEO_TRANSCRIPT.md         # Cleaned video transcript
 ├── EQUIPMENT_GUIDE.md          # Hardware/software buying guide
+├── HACKRF_INVESTIGATION.md     # Why HackRF claim was never fulfilled
 │
 ├── 01-Solving-Havana-Syndrome/
 │   ├── McLean_Solving_Havana_Syndrome.pdf
